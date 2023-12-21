@@ -1,0 +1,64 @@
+{
+  "id": "under-hollow-hills-for-pbta",
+  "title": "Under Hollow Hills compendium module, for Asacolips' Powered by the Apocalypse (PbtA) Foundry module ",
+  "description": "Under Hollow Hills compendium module, for Asacolips' Powered by the Apocalypse (PbtA) Foundry module",
+  "authors": [
+    {
+      "name": "Inigo"
+    }
+  ],
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "relationships":{
+      "systems":[
+         {
+            "id":"pbta",
+            "type":"system",
+            "manifest":"https://asacolips-artifacts.s3.amazonaws.com/pbta/0.8.0/system.json",
+            "compatibility":{
+               "verified":"0.8.0"
+            }
+         }
+      ]
+   },
+   "esmodules":[
+      "./module/under-hollow-hills-for-pbta.mjs"
+   ],
+   "styles":[
+      "styles/under-hollow-hills-for-pbta.css"
+   ],
+  "packs": [
+    {
+      "name": "consequences",
+      "label": "Consequences",
+      "system": "pbta",
+      "path": "packs/consequences.db",
+      "type": "Item"
+    },
+    {
+      "name": "playbooks",
+      "label": "Playbooks",
+      "system": "pbta",
+      "path": "packs/playbooks.db",
+      "type": "Item"
+    },
+    {
+      "name": "plays",
+      "label": "Plays",
+      "system": "pbta",
+      "path": "packs/plays.db",
+      "type": "Item"
+    },
+    {
+      "name": "trappings",
+      "label": "Trappings",
+      "system": "pbta",
+      "path": "packs/trappings.db",
+      "type": "Item"
+    }
+  ]
+}
+
