@@ -17,6 +17,7 @@ The Asacolips [Powered by the Apocalypse](https://gitlab.com/asacolips-projects/
 
 ### Installation
 
-1. To use this module, first find it and download it in the **Install Module** dialog on the Setup menu of the Foundry VTT application.
+1. To use this module, in the **Install Module** dialog on the Setup menu of the Foundry VTT application, download it
+   via the manifest URL: https://raw.githubusercontent.com/inigo/under-hollow-hills-foundryvtt/main/module.json
 2. Create a new world using the Powered by the Apocalypse game system.
 3. Open the Manage Modules window (under Game Settings) and activate the Under Hollow Hills module.
