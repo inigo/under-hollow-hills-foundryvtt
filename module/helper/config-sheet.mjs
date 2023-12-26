@@ -76,27 +76,21 @@ export const configSheet = async () => {
             },
             "npc": {
                 "attrTop": {},
-                "attrLeft": {
-                    "imagery": {
-                        "label": "Imagery",
-                        "description": null,
-                        "customLabel": false,
-                        "userLabel": false,
-                        "type": "Text",
-                        "value": ""
-                    },
-                    "craving": {
-                        "label": "Craving",
-                        "description": null,
-                        "customLabel": false,
-                        "userLabel": false,
-                        "type": "Text",
-                        "value": ""
-                    }
-                },
+                "attrLeft": {},
                 "moveTypes": {
                     "gmmoves": {
                         "label": "GM Moves",
+                        "moves": []
+                    }
+                }
+            },
+            "playbill": {
+                label: "Playbill",
+                "attrTop": {},
+                "attrLeft": {},
+                "moveTypes": {
+                    "performancemoves": {
+                        "label": "The Power of Your Performance",
                         "moves": []
                     }
                 }
