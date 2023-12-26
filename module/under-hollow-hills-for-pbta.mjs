@@ -17,5 +17,6 @@ Hooks.once('pbtaSheetConfig', () => {
    // Disable the PBTA sheet config form, and replace it with our own
    game.settings.set('pbta', 'sheetConfigOverride', true);
    configSheet();
-   configImagery();
 })
+
+configImagery();
