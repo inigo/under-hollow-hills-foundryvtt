@@ -1,7 +1,9 @@
 {
   "id": "under-hollow-hills-for-pbta",
-  "title": "Under Hollow Hills compendium module, for Asacolips' Powered by the Apocalypse (PbtA) Foundry module ",
+  "title": "Under Hollow Hills",
   "description": "Under Hollow Hills compendium module, for Asacolips' Powered by the Apocalypse (PbtA) Foundry module",
+  "url": "https://github.com/inigo/under-hollow-hills-foundryvtt",
+  "manifest": "https://raw.githubusercontent.com/inigo/under-hollow-hills-foundryvtt/main/module.json",
   "authors": [
     {
       "name": "Inigo"
