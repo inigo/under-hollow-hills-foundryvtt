@@ -5,6 +5,8 @@ export const configImagery = () => {
     Hooks.on("renderActorSheet", async function (app, html, data) {
         console.info("Rendering actor sheet");
         const actor = app.actor;
+        // Non-characters may have imagery, but it can be listed in a text block rather than changing regularly
+        if (actor.type!=="character") return;
         const bio = html.find('.cell.cell--bio')[0];
 
         /*
