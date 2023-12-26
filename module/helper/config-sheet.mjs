@@ -31,7 +31,7 @@ export const configSheet = async () => {
                         "value": 2
                     },
                     "plusOne": {
-                        "label": "Plus one (4)",
+                        "label": "Plus one (5)",
                         "value": 1
                     },
                     "zero": {
