@@ -126,7 +126,7 @@ Hooks.once('ready', async () => {
             speaker: ChatMessage.getSpeaker(),
             content: "<p><b>Roll up! Roll up! The Circus is here!</b></p>" +
                 "<p>Please create characters via the Actor tab, select an appropriate Playbook (you can see the options in <em>Compendium Packs | Playbooks</em>), " +
-                "then drag in the Obvious Plays and your Playbook-specific Plays from <em>Compendium Packs | Plays</em>, the Playbook-specific Trappings from " +
+                "then drag in the Obvious Plays and your Playbook-specific Plays from <em>Compendium Packs | Plays</em> (you can drag the whole containing folder), the Playbook-specific Trappings from " +
                 "<em>Compendium Packs | Trappings</em>, and the appropriate Consequences from <em>Compendium Packs | Consequences</em>.</p>" +
                 "<p>For each of your Plays that have an associated roll, edit the Play on your character sheet and choose a <em>Roll</em> - you should have three with 'Plus two', " +
                 "two with 'Zero', two with 'Minus one', and the remainder should be 'Plus one'. These are only your plays’ starting rolls; you’ll have many opportunities to change them.</p>" +
