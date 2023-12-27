@@ -9,40 +9,34 @@ choose {
 }
 
 /** Render the main container - using a label makes the whole thing clickable */
-choose label {
-  display: flex; align-items: center; column-gap: 1.2em; font-weight: normal !important;
+choose label { display: flex; align-items: center; column-gap: 1.2em; font-weight: normal !important; }
+choose label span:first-child { text-align: right; }
+/** Unset default Foundry settings */
+choose label input[type=checkbox] { margin-right: 0 !important; margin-left: 0 !important; border: none !important; }
 
-  span:first-child { text-align: right; }
-  /** Unset default Foundry settings */
-  input[type=checkbox] { margin-right: 0 !important; margin-left: 0 !important; border: none !important; }
-}
 
 /** Highlight first or second option, depending on the checkbox state, without using bold so the text doesn't change size */
-choose {
-  color: #666;
-  span:has(+ input:not(:checked)), input:checked + span { color: #000; -webkit-text-stroke-width: 0.4px; }
-  span { flex: 1; }
-}
+choose {color: #666; }
+choose span:has(+ input:not(:checked)), input:checked + span { color: #000; -webkit-text-stroke-width: 0.4px; }
+choose span { flex: 1; }
 
-/** Change the checkbox into a toggle */
-choose {
-  /** Hide the normal checkbox display */
-  input[type=checkbox] { appearance: none; position: relative; border: 0; outline: 0; cursor: pointer; flex: 0 0 calc(var(--toggle-size)*2); }
 
-  /** Style the background of the toggle */
-  input[type=checkbox]:after { content: ''; display: inline-block; width: calc(var(--toggle-size) * 2); height: var(--toggle-size);  border-radius: calc(var(--toggle-size) / 2); }
+/** -- Change the checkbox into a toggle */
+/** Hide the normal checkbox display */
+choose input[type=checkbox] { appearance: none; position: relative; border: 0; outline: 0; cursor: pointer; flex: 0 0 calc(var(--toggle-size)*2); }
 
-  /** Display the toggle blob */
-  input[type=checkbox]:before { content: ''; width: var(--toggle-size); height: var(--toggle-size); position: absolute; top: 0; border-radius: 50%; background: var(--toggle-color); }
+/** Style the background of the toggle */
+choose input[type=checkbox]:after { content: ''; display: inline-block; width: calc(var(--toggle-size) * 2); height: var(--toggle-size);  border-radius: calc(var(--toggle-size) / 2); }
 
-  /** Move the toggle across when selected */
-  input[type=checkbox]:before { left: 0; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
-  input[type=checkbox]:checked:before { left: var(--toggle-size); box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5); }
-  /** and change its colour */
-  input[type=checkbox]:after { background: var(--summer); }
-  input[type=checkbox]:checked:after { background: var(--winter);}
+/** Display the toggle blob */
+choose input[type=checkbox]:before { content: ''; width: var(--toggle-size); height: var(--toggle-size); position: absolute; top: 0; border-radius: 50%; background: var(--toggle-color); }
 
-  /** Transition the changes gradually when the toggle changes */
-  *, *:before, *:after { transition: ease var(--transition-duration), background-color var(--transition-duration) linear; }
-}
+/** Move the toggle across when selected */
+choose input[type=checkbox]:before { left: 0; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+choose input[type=checkbox]:checked:before { left: var(--toggle-size); box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5); }
+/** and change its colour */
+choose input[type=checkbox]:after { background: var(--summer); }
+choose input[type=checkbox]:checked:after { background: var(--winter);}
 
+/** Transition the changes gradually when the toggle changes */
+choose *, choose *:before, choose *:after { transition: ease var(--transition-duration), background-color var(--transition-duration) linear; }
