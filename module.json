@@ -4,13 +4,13 @@
   "description": "Under Hollow Hills compendium module, for Asacolips' Powered by the Apocalypse (PbtA) Foundry module",
   "url": "https://github.com/inigo/under-hollow-hills-foundryvtt",
   "manifest": "https://raw.githubusercontent.com/inigo/under-hollow-hills-foundryvtt/main/module.json",
-  "download": "https://github.com/inigo/under-hollow-hills-foundryvtt/releases/download/v0.1.1/under-hollow-hills-foundry-0_1_1.zip",
+  "download": "https://github.com/inigo/under-hollow-hills-foundryvtt/releases/download/v0.1.2/under-hollow-hills-foundry-0_1_2.zip",
   "authors": [
     {
       "name": "Inigo"
     }
   ],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
