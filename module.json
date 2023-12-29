@@ -61,6 +61,13 @@
       "system": "pbta",
       "path": "packs/trappings.db",
       "type": "Item"
+    },
+    {
+      "name": "bindings",
+      "label": "Bindings",
+      "system": "pbta",
+      "path": "packs/bindings.db",
+      "type": "Item"
     }
   ]
 }
