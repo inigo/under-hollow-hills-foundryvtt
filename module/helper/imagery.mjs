@@ -75,7 +75,7 @@ export const configImagery = () => {
         }
 
         const display = () => {
-            const text = getBio()?.rawtext ?? "More mushrooms, the bullfrog | Fish bones\nLuminous eyes | Bristly hair";
+            const text = getBio()?.rawtext ?? "Mushrooms, the bullfrog | Fish bones\nLuminous eyes | Bristly hair \n She/her | They/them";
             const checkedValues = getBio()?.checked ?? [];
 
             const values = parseImageryFn(text, checkedValues);
