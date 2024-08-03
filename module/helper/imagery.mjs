@@ -3,24 +3,37 @@
  */
 export const configImagery = () => {
     Hooks.on("renderActorSheet", async function (app, html, data) {
-        console.info("Rendering actor sheet");
+        console.info("Rendering actor sheet...");
         const actor = app.actor;
         // Non-characters may have imagery, but it can be listed in a text block rather than changing regularly
         if (actor.type!=="character") return;
         const bio = html.find('.cell.cell--bio')[0];
 
         /*
-        We're storing the imagery, and the current checked status, in the "biography" slot, as an object:
+        We're storing the imagery, and the current checked status, in the "biography" slot, as a JSON-serialized object:
             { rawtext: "Summer thing| Winter thing\nAnother | More", checked: [ true, false ] }
         and then updating that on changes.
         */
 
-        const getBio = () => actor.system.details.biography.value;
+        const getBio = () => {
+            const bioValue = actor.system.details.biography.value;
+            // Cope with older data that hasn't yet been serialized to JSON
+            if (bioValue.rawtext || bioValue.checked) {
+                return bioValue;
+            }
+            try {
+                console.log(`Bio: ${bioValue}`);
+                return JSON.parse(bioValue)
+            } catch (error) {
+                console.log("Biography not a serialized object - defaulting to {}")
+                return {};
+            }
+        }
         const setBio = async (newBio) => {
             let existingBio = getBio() ?? {};
             if (! existingBio.rawtext) existingBio = { rawtext: "", checked: [] };
             existingBio["rawtext"] = newBio;
-            await actor.update({ system: { ["details.biography.value"]: existingBio } })
+            await actor.update({ system: { ["details.biography.value"]: JSON.stringify(existingBio) } })
         };
         const setChecked = async (number, value) => {
             let existingBio = getBio() ?? {};
@@ -36,7 +49,7 @@ export const configImagery = () => {
             }
             setNthValue(number, value);
 
-            await actor.update({ system: { ["details.biography.value"]: existingBio } })
+            await actor.update({ system: { ["details.biography.value"]: JSON.stringify(existingBio) } })
         };
 
         const parseImageryFn = (rawText, checkedValues) => {

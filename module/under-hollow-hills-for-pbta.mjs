@@ -19,4 +19,18 @@ Hooks.once('pbtaSheetConfig', () => {
    configSheet();
 })
 
+if (game?.pbta) {
+   game.pbta.sheetMigration = (source) => {
+      console.log("Running sheetMigration for Under Hollow Hills");
+      if (source.details?.biography?.value?.rawtext) {
+         const serializedBio = JSON.stringify(source.details.biography.value);
+         source.details.biography = {
+            label: game.i18n.localize("PBTA.Biography"),
+            value: serializedBio
+         };
+         console.log("Biography successfully migrated");
+      }
+   }
+}
+
 configImagery();
