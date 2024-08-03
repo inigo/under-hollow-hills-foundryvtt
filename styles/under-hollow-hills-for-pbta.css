@@ -18,7 +18,7 @@ choose label input[type=checkbox] { margin-right: 0 !important; margin-left: 0 !
 /** Highlight first or second option, depending on the checkbox state, without using bold so the text doesn't change size */
 choose {color: #666; }
 choose span:has(+ input:not(:checked)), input:checked + span { color: #000; -webkit-text-stroke-width: 0.4px; }
-choose span { flex: 1; }
+choose span { flex: 1; margin-left: 1em; }
 
 
 /** -- Change the checkbox into a toggle */
